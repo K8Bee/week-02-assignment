@@ -1,0 +1,8 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: antiquewhite;
+}
+
+/* give images a class name here to interact with JS, just style the image here, e.g. focus */

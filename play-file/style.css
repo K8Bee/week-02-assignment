@@ -6,13 +6,3 @@
 }
 
 /* give images a class name here to interact with JS, just style the image here, e.g. focus */
-
-#thumbnail-container {
-  background-color: white;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 10px;
-}
-
-#fullscreen-container {
-}

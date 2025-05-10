@@ -1,72 +1,61 @@
-console.info("Hello World");
-// remember to console log everything at each step, to test before adding, will help avoid bugs, or hard to work out bugs
-// how the website is actually working:
-// two main things need to worry about are thumbnails and full-screen image
+// console.info("Hello World");
 
-
-// todo there are three main tasks:
-// 1st store images data
-// 2nd create the thumbnail Image TrackList
-// 3rd create the fullscreen images
-
-// step 1 store your images data:
-// for simplicity it might be easier to use external images, but can use local
-// an array of objects (src and alt are not optional)
+// images data (array of objects):
 const images = [
-    src: "url",
-    // or url: "url",
-    alt: "meaningful description of my image",
-    // srcSet: ,
-    // imgName: ,
-    // width: ,
-    // height: 
-]
-// harder version (if want two separate images for thumbnail and fullscreen(to get good enough resolution no matter size)):
-// const images = [ 
-// {
-//     src: "url",
-    // or url: "url",
-    // alt: "meaningful description of my image",
-    // srcSet: ,
-    // imgName: ,
-    // width: ,
-    // height: 
-// },
-//   { src: "url", alt: "meaningful description of my image" },
-//   { src: "url", alt: "meaningful description of my image" },
-// ];
+  {
+    url: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "dogimage1",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1558929996-da64ba858215?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "dogimage2",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1551717743-49959800b1f6?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "dogimage3",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "dogimage4",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1505623547966-8af2af3515ac?q=80&w=1099&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "dogimage5",
+  },
+];
+// console.log(images);
 
-// 2nd create thumbnail images:
-//  select the image containers from the DOM (html)
-//  "arrayOfImages" = the parameter
-function createThumbnails(arrayOfImages){
-// we need a loop to create our thumbnails efficiently -- two options; forEach or "for" loop
-// in the loop, thre'll be three steps (creating an image):
-// 1. create dom element (img) (better to do images not in html as would have select each image)
-// 2. update the attribute values to be the values of our images stored in the array (clue, might be something like (depending on which loop used); image.src = "something" / img.alt = / img.srcSet = / img.className = ) (ALSO add "img.className =" here so can style the images in css)
-// 3rd append the new imgs into the thumbnail container
-// 4th also want to add event listener here; why? as every image needs to have a listener, if you create it while looping it it's more efficient, might need an event handler and listenr, something like "addEventListener()" which the handler can use (you are supposed to call the largeImg funciton as part of the event, as you want the bigger img to happen when the user clicks ("function createFullscreenImage(largeimg){" is the event handler?))}
-// function createThumbnails(){
+// ----------------------------------------------------------------------------
+//create thumbnail images:
+//select image containers from the DOM:
+// section id="thumbnail-container"
+// section id="full-screen-container"
+// function createThumbnails(arrayOfImages){
+
 // }
 
-function createThumbnails(arrayOfImages) {
-    (event handler / event listener --> img.addEventListener("click", function(){
-createFullscreenImage(img)
-}))
-}
-// 3rd create full-screen image
-// "largeimage" is the parameter
-function createFullscreenImage(largeImg){
-    // we need to clear the current full-screen image before we add a new one
-    // making it empty with " = "" "
-    fullScreenContainer.innerHTML = "";
-    // create a new image element
-    // add a classNAme
-    // set the src and alt values to be the same as the thumbnail that was clicked (as we're creating a copy)
-    // the largeImg is representing the array property
-    (img.src = largeImg.url)
-    // appened this new image to the fullscreen container
-}
+// help from Luke and Val, to start forEach loop
+// also used https://www.youtube.com/watch?v=K_CxaSPjd1c
+// the forEach method of an array allows you to execute a provided function for every element of the array
+// you can call "images.forEach" and in the "()" we can specify what action we want to perform on every image (item of the array), by writing "function"
+// on a separate line, you can create the function (see below)
+// images.forEach(function (item) {
+//   console.log(item);
+//   const img = document.createElement("img");
+//   img.src = item.url;
+// });
 
+// console.log(images);
+// todo create function - but what do I want it to do?
+// the user clicks on the thumbnail
+// then a copy of the image is created in a different container
+// function
 
-// clue for (rewatch video, not sure what I was oging to write here)
+// https://javascript.plainenglish.io/how-to-create-an-img-element-with-javascript-f54ad0fda3bb
+// create img element and append to thumbnail container
+const thumbnailGalleryImgs = document.createElement("img");
+thumbnailGalleryImgs.src =
+  "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+document
+  .getElementById("thumbnail-container")
+  .appendChild(thumbnailGalleryImgs);

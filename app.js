@@ -60,7 +60,7 @@ function createThumbnails(imagesArray) {
   thumbnailImage.idName = imagesArray.idName;
   thumbnailContainer.appendChild(thumbnailImage);
   thumbnailImage.addEventListener("onclick", function () {
-    createFullscreenImage(img);
+    createFullscreenImage();
   });
 }
 

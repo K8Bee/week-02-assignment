@@ -31,3 +31,4 @@ For Joe:
     });
     }
 4.  I didn't get on well trying to draw my wireframe online, I did a paper and pencil and haven't managed to get an image on here, but it was similar to Manny's. I have included my written out plan instead in /assets/screenshots folder
+5.  I really wanted to get to the optimisation and accessibility parts, but my JavaScript is still very weak and took up all my time unfortunately. I hope to rewatch the last two weeks' videos and finish the workshops to improve JS understanding, and tinker with this page in terms of accessibility at a future date.

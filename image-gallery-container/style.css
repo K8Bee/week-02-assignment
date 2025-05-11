@@ -5,7 +5,7 @@
   background-color: antiquewhite;
 }
 
-/* give images a class name here to interact with JS, just style the image here, e.g. use focus to highlight the clicked on thumbnail image*/
+/* give images a class name here to interact with JS, just style the image here, e.g. focus */
 body {
   display: flex;
   display: block;
@@ -43,7 +43,6 @@ body {
   cursor: pointer;
 }
 
-/* more to do here */
 @media (width >= 800px) {
   #thumbnail-container {
     background-color: white;

@@ -15,6 +15,19 @@ An accessible image gallery following a mobile-first approach and responsive des
 
 ## Self-reflection notes
 
-- ## Can I plan better than last week, to break everything down to managable tasks?
-- ## Can I get better commit messages?
-- Can I
+To me:
+
+- Can I plan better than last week, to break everything down to managable tasks?
+- Can I get better commit messages?
+-
+
+For Joe:
+
+1.  What was the best way to select my image containers from the DOM? Using querySelector, or getElementById, or something else?
+2.  How can I tell if a for loop or a forEach loop would suit me better in this circumstance?
+3.  How should I have finished the end of the thumbnail function?
+    thumbnailImage.addEventListener("onclick", function () {
+    createFullscreenImage(img);
+    });
+    }
+4.  I didn't get on well trying to draw my wireframe online, I did a paper and pencil and haven't managed to get an image on here, but it was similar to Manny's. I have included my written out plan instead in /assets/screenshots folder
